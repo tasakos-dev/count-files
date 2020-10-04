@@ -20,15 +20,16 @@ def count_files(start_path):
 
 def main():
     while True:
-        dir = input('Δώσε αρχικό φάκελο [enter για τρέχων φακελο stop για έξοδο]:')
-        if dir == 'stop':
+        directory = input('Δώσε αρχικό φάκελο [enter για τρέχων φακελο stop για έξοδο]:')
+        if directory == 'stop':
             break
-        elif os.path.isdir(dir):
-            x = count_files(dir)
+        elif os.path.isdir(directory):
+            x = count_files(directory)
             if x == -1 :
                 break
         else:
-            print('Δεν βρέθηκε ο φάκελος {}'.format(dir))
+            print('Δεν βρέθηκε ο φάκελος {}'.format(directory))
 
 if __name__ == '__main__':
     main()
+
